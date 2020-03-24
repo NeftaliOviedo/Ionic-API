@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Listado de Estudiantes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let est of estudiantes; let indice = index">
+        <ion-card-header>
+            <ion-card-title (click)="verDetalle(est)">
+                <ion-icon name="person-outline"></ion-icon>
+                {{est.nombre}} {{est.apellido}}
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-buttons slot="start">
+                <ion-button color="danger" (click)="elimnarEst(est.estudianteID,indice)">Eliminar</ion-button>
+                <ion-button color="success" (click)="editarEstudiante(est)">Editar</ion-button>
+            </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

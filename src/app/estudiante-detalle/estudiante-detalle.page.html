@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot=start>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{estudiante.nombre}} {{estudiante.apellido}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{estudiante.nombre}} {{estudiante.apellido}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>Edad: {{estudiante.edad}}</p>
+            <p>Escuela: {{estudiante.escuela}}</p>
+            <p>Carrera: {{estudiante.carrera}}</p>
+            <p>Autor: {{estudiante.autor.nombre}} {{estudiante.autor.apellido}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
